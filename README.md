@@ -4,7 +4,8 @@ Tutorial Landing Page - https://community.denodo.com/tutorials/browse/basics/ind
 Download Denodo from - https://community.denodo.com/express/download/
 
 **Download Denodo Express**
-You'll have to register for an account and then you can download the Denodo Express product and license File. You can download Denodo Express from:
+You'll have to register for an account and then you can download the Denodo Express product and license File. 
+You can download Denodo Express from:
 https://community.denodo.com/express/download/
 
 
