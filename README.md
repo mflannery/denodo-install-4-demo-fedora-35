@@ -4,7 +4,7 @@
 ```
 https://community.denodo.com/tutorials/browse/basics/index 
 ```
-**Download Denodo Express**
+**Download Denodo Express**  
 You'll have to register for an account and then you can download the Denodo Express product and license File. 
 You can download Denodo Express from:
 ```
