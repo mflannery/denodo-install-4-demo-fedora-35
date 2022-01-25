@@ -26,31 +26,27 @@ unzip ~/denodo_tutorial/denodo_tutorial_files.zip -d ~/denodo_tutorial
 ```
 sudo dnf -y install https://dev.mysql.com/get/mysql80-community-release-fc35-1.noarch.rpm
 sudo dnf -y install mysql-community-server --nogpgcheck
-sudo systemctl enable --now mysqld.service
 ```
-**Grab the temporary MySQL root password. You will use this for the next step**  
-```
-sudo grep 'A temporary password' /var/log/mysqld.log | tail -1
-```
-**Install MySQL using the password from above**  
+**Install MySQL**  
 ```
 sudo mysql_secure_installation --password=$(sudo grep 'A temporary password' /var/log/mysqld.log | tail -1 | cut -d: -f4 | tail --bytes 13)
 ```
 **Set MySQL password validation to low**  
 ```
-echo 'skip-validate_password=1' | sudo tee -a /etc/my.cnf
+echo 'validate_password.policy=LOW' | sudo tee -a /etc/my.cnf
+echo 'validate_password.check_user_name=OFF' | sudo tee -a /etc/my.cnf
+echo 'validate_password.mixed_case_count=0' | sudo tee -a /etc/my.cnf
+echo 'validate_password.number_count=0' | sudo tee -a /etc/my.cnf
+echo 'validate_password.special_char_count=0' | sudo tee -a /etc/my.cnf
+echo 'validate_password.length=4' | sudo tee -a /etc/my.cnf
 ````
-**Install MySQL**  
+**Start the mysqld service**  
 ```
-sudo mysql_secure_installation --password=
+sudo systemctl enable --now mysqld.service
 ```
 **Log into MySQL as root user**  
 ```
 mysql -u root -p
-```
-**Set MySQL password policy to low**  
-```
-set global validate_password.policy=LOW;
 ```
 **Run the Schema.sql script**
 ```
