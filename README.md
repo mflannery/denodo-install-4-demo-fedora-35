@@ -32,6 +32,10 @@ sudo systemctl enable --now mysqld.service
 ```
 sudo grep 'A temporary password' /var/log/mysqld.log | tail -1
 ```
+**Install MySQL using the password from above**  
+```
+sudo mysql_secure_installation --password=$(sudo grep 'A temporary password' /var/log/mysqld.log | tail -1 | cut -d: -f4 | tail --bytes 13)
+```
 **Set MySQL password validation to low**  
 ```
 echo 'skip-validate_password=1' | sudo tee -a /etc/my.cnf
