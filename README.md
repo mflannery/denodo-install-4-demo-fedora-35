@@ -1,6 +1,6 @@
 # Installing Denodo Tutorial on Fedora 35
 
-## Tutorial Landing Page
+**Tutorial Landing Page**  
 ```
 https://community.denodo.com/tutorials/browse/basics/index 
 ```
