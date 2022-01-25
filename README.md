@@ -1,4 +1,4 @@
-#Installing Denodo Tutorial on Fedora 35
+# Installing Denodo Tutorial on Fedora 35
 
 **Tutorial Landing Page**
 ```
