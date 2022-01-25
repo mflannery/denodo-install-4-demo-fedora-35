@@ -1,6 +1,6 @@
 # Installing Denodo Tutorial on Fedora 35
 
-**Tutorial Landing Page**
+## Tutorial Landing Page
 ```
 https://community.denodo.com/tutorials/browse/basics/index 
 ```
@@ -17,7 +17,7 @@ sudo dnf -y install https://dev.mysql.com/get/mysql80-community-release-fc35-1.n
 sudo dnf install mysql-community-server --nogpgcheck
 sudo systemctl enable --now mysqld.service
 ```
-**Grab the temporary MySQL root password. You will use this for the next step.**
+**Grab the temporary MySQL root password. You will use this for the next step**
 ```
 sudo grep 'A temporary password' /var/log/mysqld.log | tail -1
 ```
