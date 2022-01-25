@@ -1,13 +1,15 @@
 #Installing Denodo Tutorial on Fedora 35
 
-Tutorial Landing Page - https://community.denodo.com/tutorials/browse/basics/index 
-Download Denodo from - https://community.denodo.com/express/download/
-
+**Tutorial Landing Page**
+```
+https://community.denodo.com/tutorials/browse/basics/index 
+```
 **Download Denodo Express**
 You'll have to register for an account and then you can download the Denodo Express product and license File. 
 You can download Denodo Express from:
+```
 https://community.denodo.com/express/download/
-
+```
 
 **Install MySQL**
 ```
