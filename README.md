@@ -22,10 +22,11 @@ wget -P ~/denodo_tutorial https://community.denodo.com/tutorials/files/denodo_tu
 ```
 unzip ~/denodo_tutorial/denodo_tutorial_files.zip -d ~/denodo_tutorial
 ```
-**Install MySQL**  
+**Download and start mysqld**  
 ```
 sudo dnf -y install https://dev.mysql.com/get/mysql80-community-release-fc35-1.noarch.rpm
 sudo dnf -y install mysql-community-server --nogpgcheck
+sudo systemctl enable --now mysqld.service
 ```
 **Install MySQL**  
 ```
@@ -41,13 +42,18 @@ I'm still testing
 #echo 'validate_password.number_count=0' | sudo tee -a /etc/my.cnf
 #echo 'validate_password.special_char_count=0' | sudo tee -a /etc/my.cnf
 #echo 'validate_password.length=4' | sudo tee -a /etc/my.cnf
-**Start the mysqld service**  
+
+**Restart mysqld**  
 ```
 sudo systemctl enable --now mysqld.service
 ```
-**Log into MySQL as root user**  
+**Log into MySQL as root user using the password created when mysql_secure_installation was run**  
 ```
 mysql -u root -p
+```
+**If a less complex root password is desired**  
+```
+alter user 'root'@'localhost identified by 'something-easier';
 ```
 **Run the Schema.sql script**
 ```
