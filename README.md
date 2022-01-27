@@ -25,7 +25,7 @@ unzip ~/denodo_tutorial/denodo_tutorial_files.zip -d ~/denodo_tutorial
 **Download and start mysqld**  
 ```
 sudo dnf -y install https://dev.mysql.com/get/mysql80-community-release-fc35-1.noarch.rpm
-sudo dnf -y install mysql-community-server --nogpgcheck
+sudo dnf -y install mysql-community-server mysql-connector-java mysql-workbench-community --nogpgcheck
 sudo systemctl enable --now mysqld.service
 ```
 **Install MySQL**  
@@ -58,8 +58,4 @@ alter user 'root'@'localhost identified by 'something-easier';
 **Run the Schema.sql script**
 ```
 source <path to>/Schema.sql;
-```
-**Install mysql_connector-java and mysql-workbench-community**  
-```
-sudo dnf install ./mysql-connector-java-8.0.28-1.fc35.noarch.rpm, mysql-workbench-community --nogpgcheck
 ```
