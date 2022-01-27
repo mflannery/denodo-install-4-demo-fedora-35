@@ -60,3 +60,5 @@ password = something-easier
 ```
 source <path to>/Schema.sql;
 ```
+**Install Denodo Express**  
+Download denodo express to your server and follow the instructions for installation.
