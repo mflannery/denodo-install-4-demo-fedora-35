@@ -34,12 +34,13 @@ sudo mysql_secure_installation --password=$(sudo grep 'A temporary password' /va
 **Set MySQL password validation to low**  
 ```
 echo 'validate_password.policy=LOW' | sudo tee -a /etc/my.cnf
-echo 'validate_password.check_user_name=OFF' | sudo tee -a /etc/my.cnf
-echo 'validate_password.mixed_case_count=0' | sudo tee -a /etc/my.cnf
-echo 'validate_password.number_count=0' | sudo tee -a /etc/my.cnf
-echo 'validate_password.special_char_count=0' | sudo tee -a /etc/my.cnf
-echo 'validate_password.length=4' | sudo tee -a /etc/my.cnf
-````
+```
+I'm still testing 
+#echo 'validate_password.check_user_name=OFF' | sudo tee -a /etc/my.cnf
+#echo 'validate_password.mixed_case_count=0' | sudo tee -a /etc/my.cnf
+#echo 'validate_password.number_count=0' | sudo tee -a /etc/my.cnf
+#echo 'validate_password.special_char_count=0' | sudo tee -a /etc/my.cnf
+#echo 'validate_password.length=4' | sudo tee -a /etc/my.cnf
 **Start the mysqld service**  
 ```
 sudo systemctl enable --now mysqld.service
