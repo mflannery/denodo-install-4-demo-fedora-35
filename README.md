@@ -45,7 +45,7 @@ I'm still testing
 
 **Restart mysqld**  
 ```
-sudo systemctl enable --now mysqld.service
+sudo systemctl restart mysqld.service
 ```
 **Log into MySQL as root user using the password created when mysql_secure_installation was run**  
 ```
