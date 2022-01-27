@@ -49,6 +49,13 @@ mysql -u root -p
 ```
 alter user 'root'@'localhost' identified by 'something-easier';
 ```
+**Automatically logging into mysql**  
+If you want to automatically log into mysql, create a ~/.my.cnf file that looks like this
+```
+[client]
+user = root
+password = something-easier
+```
 **Run the Schema.sql script**
 ```
 source <path to>/Schema.sql;
