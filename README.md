@@ -30,7 +30,7 @@ sudo systemctl enable --now mysqld.service
 ```
 **Install MySQL**  
 ```
-sudo mysql_secure_installation --password=$(sudo grep 'A temporary password' /var/log/mysqld.log | tail -1 | cut -d: -f4 | tail --bytes 13)
+sudo mysql_secure_installation --password=$(sudo grep 'A temporary password' /var/log/mysqld.log | tail -1 | cut -d: -f4 | tail --bytes 13) --use-default
 ```
 **Set MySQL password validation to low and require length to be 4 characters or more**  
 ```
