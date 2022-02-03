@@ -60,4 +60,4 @@ password = something-easier
 mysql -u root -p < path/to/Schema.sql
 ```
 **Install Denodo Express**  
-Download denodo express to your server and follow the instructions for installation.
+Download denodo express to your server and follow the instructions for installation. I used the cli installer but note that this installer does not created desktop icons in Gnome to click on to start the VDP.  You'll have to start it from the terminal and/or create your own desktop icons.
