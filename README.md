@@ -57,6 +57,7 @@ password = something-easier
 ```
 **Run the Schema.sql script**
 ```
+mysql -u root -p
 source <path to>/Schema.sql;
 ```
 **Install Denodo Express**  
